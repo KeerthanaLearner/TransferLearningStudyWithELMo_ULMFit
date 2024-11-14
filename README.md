@@ -37,12 +37,12 @@ BERT (Bidirectional Encoder Representations from Transformers) utilizes self-att
 - **Accuracy**: Reached 92% accuracy on the validation set.
 
 ## Dataset and Preprocessing
-The dataset consists of Amazon product reviews labeled by sentiment:
+The dataset used in this study consists of Amazon product reviews, which can be accessed at this [link](https://raw.githubusercontent.com/joshivaibhav/AmazonCustomerReview/master/amazondata.csv). Each review is labeled by sentiment:
    - **Positive**: 4- or 5-star ratings
    - **Negative**: 1- or 2-star ratings
    - **Neutral (3-star)**: Excluded to avoid ambiguity
 
-The dataset is split into training and validation sets to evaluate model performance.
+The dataset is further split into training and validation sets to evaluate model performance.
 
 ## Results
 | Model         | Accuracy |
@@ -57,9 +57,16 @@ The dataset is split into training and validation sets to evaluate model perform
 This study concludes that while BERT provides strong general language comprehension, **ULMFiT** with domain-specific fine-tuning is more effective for product review classification. **ELMo** serves as a computationally efficient alternative but lags in accuracy. This work emphasizes the importance of selecting models based on both accuracy and computational demands, as well as the potential of combined transfer learning strategies.
 
 ## References
-1. Alshattnawi, S., et al. (2024). Beyond Word-Based Model Embeddings: Contextualized Representations for Enhanced Social Media Spam Detection. *Applied Sciences, 14*(6), 2254.
-2. de Barros, T. M., et al. (2021). Leveraging emoji to improve sentiment classification of tweets. *Proceedings of the 36th annual ACM symposium on applied computing.*
-3. Othan, D., & Kilimci, Z. H. (2021). Stock market prediction with deep contextualized word representations. *INISTA, IEEE.*
-4. Malhotra, S., et al. (2021). Bidirectional transfer learning model for sentiment analysis. *Journal of Ambient Intelligence and Humanized Computing, 12*(11), 10267-10287.
 
-(*Further references continue as needed*)
+### ULMFiT
+- Howard, J., & Ruder, S. (2018). Universal Language Model Fine-tuning for Text Classification. *Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (ACL 2018)*, 328-339. [Link to paper](https://aclanthology.org/P18-1031)
+
+### ELMo
+- Peters, M. E., et al. (2018). Deep Contextualized Word Representations. *Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics (NAACL 2018)*, 2227-2237. [Link to paper](https://aclanthology.org/N18-1202)
+
+### BERT
+- Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2019). BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. *Proceedings of NAACL-HLT 2019*, 4171-4186. [Link to paper](https://aclanthology.org/N19-1423)
+
+### Dataset
+- Amazon Product Reviews Dataset: [Link to dataset](https://raw.githubusercontent.com/joshivaibhav/AmazonCustomerReview/master/amazondata.csv)
+
